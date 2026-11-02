@@ -15,7 +15,7 @@ st.markdown("""
         background-color: #F8F9FA;
     }
     
-    /* Estilo del botón verde desplegable de Publicación */
+    /* Botón verde desplegable de Publicación */
     [data-testid="stExpander"] summary {
         background-color: #2E7D32 !important;
         color: white !important;
@@ -33,7 +33,7 @@ st.markdown("""
         font-size: 16px;
     }
 
-    /* Contenedores de Tarjetas (Cards) elegantes */
+    /* Contenedores de Tarjetas */
     div[data-testid="stVerticalBlock"] > div[style*="border"] {
         border-radius: 10px;
         border: 1px solid #E0E0E0 !important;
@@ -158,7 +158,7 @@ with st.sidebar:
         </p>
     """, unsafe_allow_html=True)
     
-    # Botones de navegación limpios (sin emojis)
+    # Botones de navegación
     if st.button("Inicio / Búsqueda", use_container_width=True, key="nav_btn_inicio"):
         st.session_state.vista_actual = "🏠 Inicio / Búsqueda"
         st.rerun()
@@ -167,10 +167,10 @@ with st.sidebar:
         st.session_state.vista_actual = "📋 Ver Todos los Objetos (Inventario)"
         st.rerun()
 
-# Asignación correcta de la variable menu
+# Asignación de variable menu
 menu = st.session_state.vista_actual
 
-# --- ENCABEZADO INSTITUCIONAL CON IMAGEN DE FONDO ---
+# --- ENCABEZADO CON IMAGEN DE FONDO ---
 def obtener_imagen_base64(ruta_imagen):
     try:
         with open(ruta_imagen, "rb") as f:
